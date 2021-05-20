@@ -235,7 +235,6 @@ const ChessGameWrapper = (props) => {
         })
     
         socket.on("status", statusUpdate => {
-            console.log(statusUpdate)
             alert(statusUpdate)
             if (statusUpdate === 'This game session does not exist.' || statusUpdate === 'There are already 2 people playing in this room.') {
                 doesntExist(true)
